@@ -9,6 +9,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "d3": "^3.5.9"
+    "css-loader": "^0.23.0",
+    "d3": "^3.5.9",
+    "jquery": "^2.1.4",
+    "jquery-ui": "^1.10.5",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
   }
 }

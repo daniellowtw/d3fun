@@ -5,10 +5,7 @@ var appPath = path.resolve(__dirname, 'app');
 
 module.exports = {
     entry: path.resolve(appPath, 'index.js'),
-    output: {
-        path: buildPath,
-        filename: "bundle.js"
-    },
+    output: path.resolve(appPath, 'bundle.js'),
     module: {
         loaders: [
             // **IMPORTANT** This is needed so that each bootstrap js file required by
@@ -23,7 +20,7 @@ module.exports = {
             {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&minetype=application/octet-stream"},
             {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file"},
             {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&minetype=image/svg+xml"},
-            {test: /\.css$/, loader: "style!css"}
+            {test: /\.css$/, loader: "style-loader!css-loader"}
         ]
     },
     plugins: [
